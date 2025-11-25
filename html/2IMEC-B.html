@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI - 2IMEC-B</title>
+    <link rel="stylesheet" href="/css/2IMEC-B.css">
+    <script src="/js/2IMEC-B.js" defer></script>
+</head>
+<body>
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Floating Shapes -->
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+        <div class="carousel-header">
+            <div class="group-tabs">
+                <div class="group-tab active" data-slide="1">Mechatec Solutions</div>
+                <div class="group-tab" data-slide="2">CyberTrace: Plotech</div>
+                <div class="group-tab" data-slide="3">Grupo 3</div>
+                <div class="group-tab" data-slide="4">Grupo 4</div>
+                <div class="group-tab" data-slide="5">Grupo 5</div>
+                <div class="group-tab" data-slide="6">Grupo 6</div>
+            </div>
+        </div>
+        
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1920&h=1080&fit=crop" alt="Grupo 1">
+                <div class="carousel-overlay">
+                    <h2>Braço Robótico Industrial</h2>
+                    <p>Mechatec Solutions</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1563207153-f403bf289096?w=1920&h=1080&fit=crop" alt="Grupo 2">
+                <div class="carousel-overlay">
+                    <h2>Sistema de Automação Pneumática</h2>
+                    <p>CyberTrace: Plotech</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&h=1080&fit=crop" alt="Grupo 3">
+                <div class="carousel-overlay">
+                    <h2>Robô Seguidor de Linha</h2>
+                    <p>Grupo 3</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&h=1080&fit=crop" alt="Grupo 4">
+                <div class="carousel-overlay">
+                    <h2>CNC Controlado por Arduino</h2>
+                    <p>Grupo 4</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1080&fit=crop" alt="Grupo 5">
+                <div class="carousel-overlay">
+                    <h2>Sistema de Controle de Esteira</h2>
+                    <p>Grupo 5</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1080&fit=crop" alt="Grupo 6">
+                <div class="carousel-overlay">
+                    <h2>Sensor IoT para Indústria 4.0</h2>
+                    <p>Grupo 6</p>
+                </div>
+            </div>
+            
+            <button class="carousel-arrow prev">‹</button>
+            <button class="carousel-arrow next">›</button>
+        </div>
+        
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <h2 class="section-title">Projetos 2IMEC-B</h2>
+
+        <!-- Projeto 1 -->
+        <div class="project-card">
+            <div class="project-image" onclick="window.open('https://www.youtube.com/watch?v=EnHxN1TUS8s', '_blank')">
+                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Projeto 1">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">Mechatec Solutions</div>
+                <h3 class="project-title">Mechatec Solutions</h3>
+                <p class="project-description">
+                    Seletora de brocas automatizada, onde você escolhe a broca desejada e ela te entrega automaticamente, fazendo o controle de dados e organizando o ambiente de trabalho
+                </p>
+                <a href="https://www.youtube.com/watch?v=EnHxN1TUS8s" target="_blank" class="project-link">Assistir Vídeo</a>
+            </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="project-card">
+            <div class="project-image" onclick="window.open('https://www.youtube.com/watch?v=EnHxN1TUS8s', '_blank')">
+                <img src="https://images.unsplash.com/photo-1563207153-f403bf289096?w=800" alt="Projeto 2">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">CyberTrace: Plotech</div>
+                <h3 class="project-title">CyberTrace: Plotech</h3>
+                <p class="project-description">
+                    Plotech, a mesa cartesiana de baixo custo controlada por uma inteligência artificial, que será projetada para realizar desenhos técnicos e escritas com precisão.
+                </p>
+                <a href="https://www.youtube.com/watch?v=EnHxN1TUS8s" target="_blank" class="project-link">Assistir Vídeo</a>
+            </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="project-card">
+            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
+                <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800" alt="Projeto 3">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">TechnoArm:Arm Simulator</div>
+                <h3 class="project-title">TechnoArm : Arm Simulator</h3>
+                <p class="project-description">
+                    Braço robótico em menor escala, para uma solução prática, aulas dinâmicas e  melhor o desenvolvimento de trabalhos e estudos
+                </p>
+                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
+            </div>
+        </div>
+
+        <!-- Projeto 4 -->
+        <div class="project-card">
+            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Projeto 4">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">PROJETO 04</div>
+                <h3 class="project-title">CNC Controlado por Arduino</h3>
+                <p class="project-description">
+                    Fresadora CNC de 3 eixos controlada por GRBL e Arduino, capaz de realizar 
+                    usinagem de precisão em materiais como madeira, plástico e alumínio.
+                </p>
+                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
+            </div>
+        </div>
+
+        <!-- Projeto 5 -->
+        <div class="project-card">
+            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800" alt="Projeto 5">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">PROJETO 05</div>
+                <h3 class="project-title">Sistema de Controle de Esteira Transportadora</h3>
+                <p class="project-description">
+                    Automação completa de esteira transportadora com sensores de presença, 
+                    controle de velocidade variável e sistema de classificação de objetos.
+                </p>
+                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
+            </div>
+        </div>
+
+        <!-- Projeto 6 -->
+        <div class="project-card">
+            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1080&fit=crop" alt="Projeto 6">
+                <div class="play-button">▶</div>
+            </div>
+            <div class="project-content">
+                <div class="project-number">PROJETO 06</div>
+                <h3 class="project-title">Sistema IoT para Indústria 4.0</h3>
+                <p class="project-description">
+                    Rede de sensores inteligentes conectados via IoT para monitoramento em tempo real 
+                    de temperatura, umidade, vibração e consumo energético de máquinas industriais.
+                </p>
+                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>SENAI São Carlos - 2IMEC-B</p>
+        <p style="opacity: 0.6; margin-top: 10px;">© 2024 Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

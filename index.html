@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos SENAI São Carlos</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-
+    <title>SENAI São Carlos - Projetos 2025</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <!-- Particles Canvas -->
@@ -15,208 +14,171 @@
     <!-- Floating Shapes -->
     <div class="floating-shape shape-1"></div>
     <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
 
-    <!-- Carousel Section -->
-    <section class="carousel-section">
-        <div class="carousel-header">
-            <div class="group-tabs">
-                <div class="group-tab active" data-slide="0">GRUPO 1</div>
-                <div class="group-tab" data-slide="1">GRUPO 2</div>
-                <div class="group-tab" data-slide="2">GRUPO 3</div>
-                <div class="group-tab" data-slide="3">GRUPO 4</div>
-                <div class="group-tab" data-slide="4">GRUPO 5</div>
-                <div class="group-tab" data-slide="5">GRUPO 6</div>
-                <div class="group-tab" data-slide="6">GRUPO 7</div>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="logo-container">
+            <svg class="senai-logo" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="10" width="180" height="60" rx="10" fill="url(#grad1)"/>
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#f46337;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#e32929;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+                <text x="100" y="48" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="white" text-anchor="middle">SENAI</text>
+            </svg>
         </div>
-        
-        <div class="carousel-container">
-            <div class="carousel-slide active">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&h=1080&fit=crop" alt="Grupo 1">
-                <div class="carousel-overlay">
-                    <h2>Sistema de Automação Industrial</h2>
-                    <p>Grupo 1</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=1920&h=1080&fit=crop" alt="Grupo 2">
-                <div class="carousel-overlay">
-                    <h2>Robô Autônomo de Navegação</h2>
-                    <p>Grupo 2</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&h=1080&fit=crop" alt="Grupo 3">
-                <div class="carousel-overlay">
-                    <h2>Plataforma de Monitoramento Ambiental</h2>
-                    <p>Grupo 3</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1920&h=1080&fit=crop" alt="Grupo 4">
-                <div class="carousel-overlay">
-                    <h2>Aplicativo de Gestão Educacional</h2>
-                    <p>Grupo 4</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&h=1080&fit=crop" alt="Grupo 5">
-                <div class="carousel-overlay">
-                    <h2>Sistema de Energia Renovável</h2>
-                    <p>Grupo 5</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=1920&h=1080&fit=crop" alt="Grupo 6">
-                <div class="carousel-overlay">
-                    <h2>Impressora 3D de Baixo Custo</h2>
-                    <p>Grupo 6</p>
-                </div>
-            </div>
-            <div class="carousel-slide">
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1920&h=1080&fit=crop" alt="Grupo 7">
-                <div class="carousel-overlay">
-                    <h2>Sistema de Segurança Inteligente</h2>
-                    <p>Grupo 7</p>
-                </div>
-            </div>
-            
-            <button class="carousel-arrow prev">‹</button>
-            <button class="carousel-arrow next">›</button>
-        </div>
-        
+        <h1 class="hero-title">Projetos SENAI 2025</h1>
+        <p class="hero-subtitle">São Carlos - Inovação e Tecnologia</p>
         <div class="scroll-indicator"></div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <h2 class="section-title">Nossos Projetos</h2>
-
-        <!-- Projeto 1 -->
-        <div class="project-card">
-            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
-                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800" alt="Projeto 1">
-                <div class="play-button">▶</div>
+    <!-- Classes Section -->
+    <section class="classes-section">
+        <h2 class="section-title">Turmas SENAI São Carlos 2024</h2>
+        
+        <div class="classes-grid">
+            <!-- Turma 3TDS -->
+            <div class="class-card" onclick="window.location.href='/html/3TDS.html'">
+                <div class="class-image">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800" alt="3TDS">
+                    <div class="class-badge">3TDS</div>
+                </div>
+                <div class="class-content">
+                    <h3 class="class-title">3º Técnico em Desenvolvimento de Sistemas</h3>
+                    <p class="class-description">
+                        Turma de formandos com projetos inovadores em desenvolvimento web full-stack, IoT, automação e sistemas inteligentes.
+                    </p>
+                    <div class="class-stats">
+                        <div class="stat">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Projetos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">36</div>
+                            <div class="stat-label">Alunos</div>
+                        </div>
+                    </div>
+                    <a href="html/3TDS.html" class="class-btn">Ver Projetos</a>
+                </div>
             </div>
-            <div class="project-content">
-                <div class="project-number">PROJETO 01</div>
-                <h3 class="project-title">Sistema de Automação Industrial</h3>
-                <p class="project-description">
-                    Desenvolvimento de um sistema completo de automação para controle de processos industriais, 
-                    utilizando IoT e sensores inteligentes para otimização de produção.
-                </p>
-                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
+
+            <!-- Turma 2IMEC-B -->
+            <div class="class-card" onclick="window.location.href='/html/2IMEC-B.html'">
+                <div class="class-image">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="2IMEC-B">
+                    <div class="class-badge">2IMEC-B</div>
+                </div>
+                <div class="class-content">
+                    <h3 class="class-title">2º Integral em Mecatrônica - Turma B</h3>
+                    <p class="class-description">
+                        Projetos integrando robótica, automação industrial, eletrônica e programação embarcada para soluções mecatrônicas.
+                    </p>
+                    <div class="class-stats">
+                        <div class="stat">
+                            <div class="stat-number">6</div>
+                            <div class="stat-label">Projetos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">30</div>
+                            <div class="stat-label">Alunos</div>
+                        </div>
+                    </div>
+                    <a href="html/2IMEC-B.html" class="class-btn">Ver Projetos</a>
+                </div>
+            </div>
+
+            <!-- Turma 2IMEC-C -->
+            <div class="class-card" onclick="window.location.href='/html/2IMEC-C.html'">
+                <div class="class-image">
+                    <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="2IMEC-C">
+                    <div class="class-badge">2IMEC-C</div>
+                </div>
+                <div class="class-content">
+                    <h3 class="class-title">2º Integral em Mecatrônica - Turma C</h3>
+                    <p class="class-description">
+                        Desenvolvimento de sistemas automatizados, sensores inteligentes e controle de processos industriais aplicados.
+                    </p>
+                    <div class="class-stats">
+                        <div class="stat">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Projetos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">32</div>
+                            <div class="stat-label">Alunos</div>
+                        </div>
+                    </div>
+                    <a href="html/2IMEC-C.html" class="class-btn">Ver Projetos</a>
+                </div>
+            </div>
+
+            <!-- Turma 2IDS-SC -->
+            <div class="class-card" onclick="window.location.href='/html/2IDS.html'">
+                <div class="class-image">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800" alt="2IDS-SC">
+                    <div class="class-badge">2IDS-SC</div>
+                </div>
+                <div class="class-content">
+                    <h3 class="class-title">2º Integral em Desenvolvimento de Sistemas</h3>
+                    <p class="class-description">
+                        Turma integral com foco em aplicações web modernas, mobile, banco de dados e arquitetura de software escalável.
+                    </p>
+                    <div class="class-stats">
+                        <div class="stat">
+                            <div class="stat-number">8</div>
+                            <div class="stat-label">Projetos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">35</div>
+                            <div class="stat-label">Alunos</div>
+                        </div>
+                    </div>
+                    <a href="html/2IDS.html" class="class-btn">Ver Projetos</a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Projeto 2 -->
-        <div class="project-card">
-            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
-                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800" alt="Projeto 2">
-                <div class="play-button">▶</div>
-            </div>
-            <div class="project-content">
-                <div class="project-number">PROJETO 02</div>
-                <h3 class="project-title">Robô Autônomo de Navegação</h3>
-                <p class="project-description">
-                    Criação de um robô capaz de navegar autonomamente em ambientes internos, 
-                    utilizando visão computacional e algoritmos de inteligência artificial.
-                </p>
-                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
-            </div>
-        </div>
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <h2 class="about-title">Sobre o SENAI São Carlos</h2>
+            <p class="about-text">
+                O SENAI São Carlos é referência em formação técnica e tecnológica na região, 
+                preparando profissionais para os desafios da Indústria 4.0. Nossos alunos desenvolvem 
+                projetos inovadores que conectam teoria e prática, criando soluções reais para problemas 
+                do mercado de trabalho.
+            </p>
 
-        <!-- Projeto 3 -->
-        <div class="project-card">
-            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
-                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="Projeto 3">
-                <div class="play-button">▶</div>
-            </div>
-            <div class="project-content">
-                <div class="project-number">PROJETO 03</div>
-                <h3 class="project-title">Plataforma de Monitoramento Ambiental</h3>
-                <p class="project-description">
-                    Sistema web e mobile para monitoramento em tempo real de parâmetros ambientais, 
-                    auxiliando na gestão sustentável de recursos naturais.
-                </p>
-                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
-            </div>
-        </div>
-
-        <!-- Projeto 4 -->
-        <div class="project-card">
-            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800" alt="Projeto 4">
-                <div class="play-button">▶</div>
-            </div>
-            <div class="project-content">
-                <div class="project-number">PROJETO 04</div>
-                <h3 class="project-title">Aplicativo de Gestão Educacional</h3>
-                <p class="project-description">
-                    Desenvolvimento de uma plataforma completa para gestão escolar, integrando professores, 
-                    alunos e responsáveis em um ambiente digital colaborativo.
-                </p>
-                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
-            </div>
-        </div>
-
-        <!-- Projeto 5 -->
-        <div class="project-card">
-            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" alt="Projeto 5">
-                <div class="play-button">▶</div>
-            </div>
-            <div class="project-content">
-                <div class="project-number">PROJETO 05</div>
-                <h3 class="project-title">Sistema de Energia Renovável</h3>
-                <p class="project-description">
-                    Projeto de implementação de um sistema híbrido de energia solar e eólica, 
-                    com monitoramento inteligente e otimização de consumo energético.
-                </p>
-                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
-            </div>
-        </div>
-
-        <!-- Projeto 6 -->
-        <div class="project-card">
-            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
-                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800" alt="Projeto 6">
-                <div class="play-button">▶</div>
-            </div>
-            <div class="project-content">
-                <div class="project-number">PROJETO 06</div>
-                <h3 class="project-title">Impressora 3D de Baixo Custo</h3>
-                <p class="project-description">
-                    Desenvolvimento de uma impressora 3D acessível e eficiente, 
-                    democratizando o acesso à tecnologia de fabricação digital.
-                </p>
-                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
-            </div>
-        </div>
-
-        <!-- Projeto 7 -->
-        <div class="project-card">
-            <div class="project-image" onclick="window.open('https://youtube.com', '_blank')">
-                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800" alt="Projeto 7">
-                <div class="play-button">▶</div>
-            </div>
-            <div class="project-content">
-                <div class="project-number">PROJETO 07</div>
-                <h3 class="project-title">Sistema de Segurança Inteligente</h3>
-                <p class="project-description">
-                    Solução completa de segurança utilizando reconhecimento facial, 
-                    alertas em tempo real e integração com dispositivos móveis para proteção residencial.
-                </p>
-                <a href="https://youtube.com" target="_blank" class="project-link">Assistir Vídeo</a>
+            <div class="stats-grid">
+                <div class="global-stat">
+                    <div class="global-stat-number">28+</div>
+                    <div class="global-stat-label">Projetos Desenvolvidos</div>
+                </div>
+                <div class="global-stat">
+                    <div class="global-stat-number">125+</div>
+                    <div class="global-stat-label">Alunos Participantes</div>
+                </div>
+                <div class="global-stat">
+                    <div class="global-stat-number">4</div>
+                    <div class="global-stat-label">Turmas Participantes</div>
+                </div>
+                <div class="global-stat">
+                    <div class="global-stat-number">100%</div>
+                    <div class="global-stat-label">Dedicação e Inovação</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Logo_SENAI.svg" alt="SENAI Logo">
-        <p>SENAI São Carlos - Formando o futuro da tecnologia</p>
-        <p style="opacity: 0.6; margin-top: 10px;">© 2024 Todos os direitos reservados</p>
+        <p><strong>SENAI São Carlos</strong></p>
+        <p>Formando o futuro da tecnologia</p>
+        <p style="opacity: 0.6; margin-top: 15px;">© 2025 Todos os direitos reservados</p>
     </footer>
 
 </body>
