@@ -1,104 +1,147 @@
-const translations = {
-    pt: {
-        back: "Voltar",
-        theme: "Tema",
-        ourProjects: "Nossos Projetos",
-        working: "Funcionamento",
-        visitSite: "Visitar site",
-        
-        // Footer
-        footerCity: "SENAI São Carlos",
-        footerText: "Centro de referência em formação técnica e tecnológica.",
-        footerSlogan: "Formando o futuro da tecnologia",
-        footerDevTitle: "Desenvolvedor",
-        footerDevelopedBy: "Desenvolvido por",
-        footerRights: "© 2025 SENAI São-Carlos - Todos os direitos reservados",
-
-        // Títulos e Descrições dos Projetos (3TDS)
-        controlTechTitle: "Gerenciamento de Estoque",
-        controlTechDesc: "Desenvolvimento de um sistema completo de automação para controle de processos industriais, utilizando IoT e sensores inteligentes para otimização de produção.",
-        
-        ioTurnTitle: "Sua operação mais inteligente",
-        ioTurnDesc: "Ecossistema IoT robusto utilizando comunicação LoRa para coleta de dados e algoritmos de Inteligência Artificial.",
-        
-        stockBotTitle: "Gerenciamento de almoxarifado",
-        stockBotDesc: "O StockBot visa preencher lacunas em seu estoque, sem a existência de falhas utilizando um sistema prático.",
-        
-        lyriaTitle: "Assistente comunicativo com IA",
-        lyriaDesc: "Lyria tem como objetivo facilitar o cotidiano, com chatbot e robô capazes de adotar diferentes personalidades.",
-        
-        communityTitle: "Rede Social do SENAI",
-        communityDesc: "Plataforma para conectar alunos e projetos em um ambiente inovador.",
-        
-        lingoLensTitle: "Tradutor de Libras inteligente",
-        lingoLensDesc: "Tradutor de Libras em tempo real que captura gestos e converte em texto.",
-        
-        faceShieldTitle: "Sistema de Segurança Inteligente",
-        faceShieldDesc: "Solução de reconhecimento facial e alertas em tempo real."
-    },
-    en: {
-        back: "Back",
-        theme: "Theme",
-        ourProjects: "Our Projects",
-        working: "How it works",
-        visitSite: "Visit site",
-        
-        // Footer
-        footerCity: "SENAI São Carlos",
-        footerText: "Reference center in technical and technological education.",
-        footerSlogan: "Shaping the future of technology",
-        footerDevTitle: "Developer",
-        footerDevelopedBy: "Developed by",
-        footerRights: "© 2025 SENAI São-Carlos - All rights reserved",
-
-        // Títulos e Descrições dos Projetos (EN)
-        controlTechTitle: "Inventory Management",
-        controlTechDesc: "Development of a complete automation system for industrial process control, using IoT and smart sensors for production optimization.",
-        
-        ioTurnTitle: "Your operation smarter",
-        ioTurnDesc: "Robust IoT ecosystem using LoRa communication for data collection and Artificial Intelligence algorithms.",
-        
-        stockBotTitle: "Warehouse Management",
-        stockBotDesc: "StockBot aims to fill gaps in your stock without failures, using a practical system.",
-        
-        lyriaTitle: "Communicative AI Assistant",
-        lyriaDesc: "Lyria aims to facilitate daily life, with a chatbot and robot capable of adopting different personalities.",
-        
-        communityTitle: "SENAI Social Network",
-        communityDesc: "Platform to connect students and projects in an innovative environment.",
-        
-        lingoLensTitle: "Smart Sign Language Translator",
-        lingoLensDesc: "Real-time Sign Language translator that captures gestures and converts them into text.",
-        
-        faceShieldTitle: "Smart Security System",
-        faceShieldDesc: "Facial recognition solution and real-time alerts."
-    }
-};
-
-function updateLanguage(lang) {
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[lang] && translations[lang][key]) {
-            const span = element.querySelector('span');
-            if (span) {
-                span.textContent = translations[lang][key];
-            } else {
-                element.textContent = translations[lang][key];
-            }
-        }
-    });
-    const langBtn = document.getElementById('current-lang');
-    if(langBtn) langBtn.textContent = lang.toUpperCase();
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    const langToggle = document.getElementById('language-toggle');
-    let currentLang = 'pt';
-    if (langToggle) {
-        langToggle.addEventListener('click', () => {
-            currentLang = currentLang === 'pt' ? 'en' : 'pt';
-            updateLanguage(currentLang);
+    // 1. Definição dos textos (O Dicionário)
+    const translations = {
+        pt: {
+            back: "Voltar",
+            theme: "Tema",
+            
+            // Títulos dos Projetos (Carousel e Cards)
+            controlTechTitle: "Gerenciamento de Estoque",
+            ioTurnTitle: "Sua operação mais inteligente",
+            stockBotTitle: "Gerenciamento de almoxarifado",
+            lyriaTitle: "Assistente comunicativo com IA",
+            communityTitle: "Rede Social do SENAI",
+            lingoLensTitle: "Tradutor de Libras inteligente",
+            // Atualizado conforme seu HTML
+            faceShieldTitle: "Gestão inteligente de empréstimos com reconhecimento facial e buscas rápidas.",
+            
+            // Seção
+            ourProjects: "Nossos Projetos",
+            
+            // Descrições
+            // Atualizado conforme seu HTML
+            controlTechDesc: "ControlTech é um sistema de gerenciamento de estoque inteligente, no qual utiliza o crachá para seu acesso.",
+            ioTurnDesc: "Ecossistema IoT robusto utilizando comunicação LoRa para coleta de dados e algoritmos de Inteligência Artificial.",
+            stockBotDesc: "O StockBot visa preencher lacunas em seu estoque, sem a existência de falhas utilizando um sistema pratico.",
+            lyriaDesc: "Lyria tem como objetivo facilitar o cotidiano, com chatbot e robô capazes de adotar diferentes personalidades.",
+            communityDesc: "Rede social exclusiva para conectar alunos do SENAI a projetos e vagas de emprego.",
+            lingoLensDesc: "Tradutor de Libras em tempo real que captura gestos e converte em texto.",
+            faceShieldDesc: "Sistema de gerenciamento de empréstimos de ferramentas com reconhecimento facial, CRUD e buscas detalhadas.",
+            
+            // Botões dos Cards
+            working: "Funcionamento",
+            commercial: "Comercial",
+            visitSite: "Visitar site",
+            
+            // Footer
+            footerAboutTitle: "SENAI São Carlos",
+            footerAboutText: "Centro de referência em formação técnica e tecnológica, preparando profissionais para os desafios da Indústria 4.0.",
+            footerAboutSlogan: "Formando o futuro da tecnologia",
+            
+            footerClassesTitle: "Turmas 2024/2025",
+            class3TDSTitle: "3º Técnico em Desenvolvimento de Sistemas",
+            footerClass2IMECB: "2º Integrado em Mecatrônica Turma B",
+            footerClass2IMECC: "2º Integrado em Mecatrônica Turma C",
+            class2IDSTitle: "2º Integrado em Desenvolvimento de Sistemas",
+            
+            footerDeveloperTitle: "Equipe de Desenvolvimento",
+            techLead: "Tech Lead",
+            developers: "Desenvolvedores:",
+            footerIndustry: "Serviço Nacional de Aprendizagem Industrial",
+            footerRights: "© 2025 Todos os direitos reservados",
+            footerDevelopedBy: "Desenvolvido por"
+        },
+        en: {
+            back: "Back",
+            theme: "Theme",
+            
+            // Project Titles
+            controlTechTitle: "Stock Management",
+            ioTurnTitle: "Your operation, smarter",
+            stockBotTitle: "Warehouse Management",
+            lyriaTitle: "Communicative AI Assistant",
+            communityTitle: "SENAI Social Network",
+            lingoLensTitle: "Smart Sign Language Translator",
+            // Tradução atualizada
+            faceShieldTitle: "Intelligent loan management with facial recognition and quick searches.",
+            
+            // Section
+            ourProjects: "Our Projects",
+            
+            // Descriptions
+            // Tradução atualizada
+            controlTechDesc: "ControlTech is an intelligent inventory management system that uses a badge for access.",
+            ioTurnDesc: "Robust IoT ecosystem using LoRa communication for data collection and AI algorithms.",
+            stockBotDesc: "StockBot aims to fill inventory gaps without failures using a practical system.",
+            lyriaDesc: "Lyria aims to facilitate daily life, with a chatbot and robot capable of adopting different personalities.",
+            communityDesc: "Exclusive social network connecting SENAI students to projects and job openings.",
+            lingoLensDesc: "Real-time Sign Language translator that captures gestures and converts them to text.",
+            faceShieldDesc: "Tool loan management system with facial recognition, CRUD, and detailed searches.",
+            
+            // Card Buttons
+            working: "How it works",
+            commercial: "Commercial",
+            visitSite: "Visit site",
+            
+            // Footer
+            footerAboutTitle: "SENAI São Carlos",
+            footerAboutText: "Reference center in technical and technological training, preparing professionals for Industry 4.0 challenges.",
+            footerAboutSlogan: "Shaping the future of technology",
+            
+            footerClassesTitle: "Classes 2024/2025",
+            class3TDSTitle: "3rd Systems Development Technician",
+            footerClass2IMECB: "2nd Mechatronics Integrated Class B",
+            footerClass2IMECC: "2nd Mechatronics Integrated Class C",
+            class2IDSTitle: "2nd Systems Development Integrated",
+            
+            footerDeveloperTitle: "Development Team",
+            techLead: "Tech Lead",
+            developers: "Developers:",
+            footerIndustry: "National Service for Industrial Training",
+            footerRights: "© 2025 All rights reserved",
+            footerDevelopedBy: "Developed by"
+        }
+    };
+
+    // 2. Lógica de Troca de Idioma
+    const languageToggleBtn = document.getElementById('language-toggle');
+    const currentLangSpan = document.getElementById('current-lang');
+    
+    // Verifica se já existe uma preferência salva, senão usa PT
+    let currentLang = localStorage.getItem('siteLang') || 'pt';
+
+    // Função para aplicar a tradução
+    function updateLanguage(lang) {
+        // Atualiza todos os elementos que possuem o atributo data-i18n
+        const elements = document.querySelectorAll('[data-i18n]');
+        
+        elements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            // Verifica se a chave existe no dicionário
+            if (translations[lang] && translations[lang][key]) {
+                // Se for um input placeholder, usa placeholder, senão usa textContent
+                if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                    element.placeholder = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
+            }
         });
+
+        // Atualiza o texto do botão de idioma
+        currentLangSpan.textContent = lang === 'pt' ? 'PT' : 'EN';
+        
+        // Salva a preferência
+        localStorage.setItem('siteLang', lang);
+        currentLang = lang;
     }
+
+    // Inicializa com o idioma salvo
+    updateLanguage(currentLang);
+
+    // Evento de clique no botão
+    languageToggleBtn.addEventListener('click', () => {
+        const newLang = currentLang === 'pt' ? 'en' : 'pt';
+        updateLanguage(newLang);
+    });
 });

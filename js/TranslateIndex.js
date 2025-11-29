@@ -5,7 +5,7 @@ const translations = {
         theme: "Tema",
         
         // Hero
-        heroTitle: "Workshop 2025\nProjetos de Inovação",
+        heroTitle: "Workshop 2025\nMecatrônica e Desenvolvimento de Sistemas",
         heroSubtitle: "São Carlos - Tecnologia em Ação",
         
         // Seção de Turmas
@@ -65,7 +65,7 @@ const translations = {
         theme: "Theme",
         
         // Hero
-        heroTitle: "Workshop 2025\nInnovation Projects",
+        heroTitle: "Workshop 2025\nMechatronics and Systems Development",
         heroSubtitle: "São Carlos - Technology in Action",
         
         // Classes Section
